@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import joblib
 
 
 new_df = pd.read_csv('talents.csv')
@@ -43,7 +44,7 @@ st.dataframe(filtered_data)
 if st.button('predict Page'):
     # Second page
     st.title('predict if you are talent or not')
-import joblib
+
 model = joblib.load('model.pkl')
 
 # Inputs
